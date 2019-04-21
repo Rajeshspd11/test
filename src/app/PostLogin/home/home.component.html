@@ -1,0 +1,25 @@
+<p>
+  home works!
+  Welcome {{welcome}}
+</p>
+
+
+
+<div class="container">
+  <ng-template #FullArray>
+      <!--<div [ngIf]="result==true">No Reult Found </div>-->
+    <div class="badge" *ngFor="let arrayEl of arrayForSearch; index as i">{{arrayForSearch[i]}} </div>
+  </ng-template>
+</div>
+<div class="container">
+  <input type="search" (input)="onSearch()" #search>
+</div>
+<div *ngIf="display; then ResultArray else FullArray "> 
+</div>
+<ng-template #ResultArray>
+  Search Results
+<div class="container" *ngFor="let arrayEl of arrayToDisplay; index as i">{{arrayToDisplay[i]}}</div>
+</ng-template>
+<footer>
+  <button type="submit" (click)="onLogOut()">Logout</button>
+</footer>

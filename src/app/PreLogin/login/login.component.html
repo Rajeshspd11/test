@@ -1,0 +1,30 @@
+<p>
+  login works!
+</p>
+  <form  [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Username"
+              formControlName="username" required>
+      <input type="password" placeholder="Password"
+                          maxlength="20" minlength="8" required>
+
+      <button>Submit</button>
+
+ 
+  </form>
+     <!-- <div *ngIf="valDisplay">
+        Please enter valid user name.
+     </div> -->
+<!-- 
+   <div [ngIf]="valDisplay">
+      Please enter valid user name.
+  </div> 
+
+   <ng-template *ngIf="valDisplay">
+    hey  </ng-template>  
+
+    <div *ngIf="valDisplay">Text to show</div>
+
+   -->
+  
+
+
